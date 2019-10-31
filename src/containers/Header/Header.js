@@ -51,7 +51,7 @@ class Header extends Component {
                                         {this.state.links.map((l, index) => {
                                             return (
                                                 <li key={index}>
-                                                    <NavLink className="main_nav_item" to={l.url}>{l.name}</NavLink>
+                                                    <NavLink className="main_nav_item" exact to={l.url}>{l.name}</NavLink>
                                                 </li>
                                             )
                                         })}
@@ -64,7 +64,7 @@ class Header extends Component {
                                         {this.state.links.map((l, index) => {
                                             return (
                                                 <li key={index}>
-                                                    <NavLink className="hidden_nav_item" to={l.url}>{l.name}</NavLink>
+                                                    <NavLink className="hidden_nav_item" exact to={l.url}>{l.name}</NavLink>
                                                 </li>
                                             )
                                         })}
@@ -92,7 +92,7 @@ class Header extends Component {
                                         {this.state.links.map((l, index) => {
                                             return (
                                                 <li key={index}>
-                                                    <NavLink className="main_nav_item" to={l.url}>{l.name}</NavLink>
+                                                    <NavLink className="main_nav_item" exact to={l.url}>{l.name}</NavLink>
                                                 </li>
                                             )
                                         })}
@@ -100,12 +100,12 @@ class Header extends Component {
                                 </nav>
                             </div>
                             <div className="col-12 pt-3">
-                                <div className="hidden_main_nav">
+                                <div className="hidden_main_nav">   
                                     <ul>
                                         {this.state.links.map((l, index) => {
                                             return (
                                                 <li key={index}>
-                                                    <NavLink className="hidden_nav_item" to={l.url}>{l.url}</NavLink>
+                                                    <NavLink className="hidden_nav_item" exact to={l.url}>{l.name}</NavLink>
                                                 </li>
                                             )
                                         })}

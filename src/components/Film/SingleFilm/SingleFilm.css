@@ -1,0 +1,175 @@
+#film .header {
+  padding-top: 10px;
+  border-bottom: 1px solid #d8d8d8;
+}
+#film .header h3 {
+  margin: 0px !important;
+  color: #fbbd61;
+  border-bottom: 3px solid #fbbd61;
+  width: 25%;
+  padding-bottom: 20px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+#film .link_image {
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#film .link_image a {
+  position: relative;
+}
+#film .link_image a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+#film .link_image a .dublaj {
+  position: absolute;
+  top: -150px;
+  left: -60px;
+  width: 220px;
+  height: 40px;
+  transform: rotate(-45deg);
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 115%;
+  font-family: "Kalam", cursive;
+  text-transform: uppercase;
+}
+#film .link_image a:hover img {
+  transform: scale(1.1);
+}
+#film .networks {
+  margin: auto;
+  padding-top: 20px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+#film .networks i {
+  text-align: center;
+  line-height: 35px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #d8d8d8;
+  border-radius: 100%;
+  color: #ec7532;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+#film .networks i:hover {
+  border-color: #fbbd61;
+  color: #fbbd61;
+}
+#film .about {
+  position: relative;
+}
+#film .about dt {
+  color: #be5f28;
+  display: inline-block;
+  width: 20%;
+}
+#film .about dd {
+  display: inline-block;
+  width: 70%;
+}
+#film .about dd i {
+  margin: 5px;
+}
+#film .about dd a {
+  text-decoration: none;
+  color: #fbbd61;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+}
+#film .about dd a:hover {
+  color: #be5f28;
+}
+#film .about .like_dislike_buttons button {
+  padding: 10px 30px;
+  border: 1px solid #ec7532;
+  outline: none;
+  border-radius: 25px;
+  background: none;
+  cursor: pointer;
+  color: #ec7532;
+  transition: all 0.2s linear;
+}
+#film .about .like_dislike_buttons button:hover {
+  background-color: #ec7532;
+  color: white;
+}
+#film .about .like_dislike_buttons .active {
+  background-color: #ec7532;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  #film .header h3 {
+    width: 45%;
+  }
+  #film .link_image {
+    width: 100%;
+    height: 400px;
+  }
+  #film .link_image a .dublaj {
+    top: -150px;
+  }
+  #film .networks {
+    width: 60%;
+  }
+  #film .about dt {
+    display: block;
+    width: 100%;
+  }
+  #film .about dd {
+    display: block;
+    width: 100%;
+  }
+}
+
+#film_iframe {
+  position: relative;
+  height: 800px;
+}
+#film_iframe .cover_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#film_iframe:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.823) 100%);
+  z-index: 98;
+}
+#film_iframe iframe {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 99;
+  width: 1140px;
+  height: 650px;
+}
+
+@media (max-width: 1024px) {
+  #film_iframe {
+    height: 350px;
+  }
+  #film_iframe iframe {
+    width: 95%;
+    height: 230px;
+  }
+}

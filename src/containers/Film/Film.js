@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Aux from '../Auxiliary';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import './Film.css';
 
 class Film extends Component {
@@ -13,18 +13,18 @@ class Film extends Component {
                     </div>
                     <div className="inner">
                         <div className="link_image">
-                            <Link to="#">
+                            <NavLink to={'/films/' + this.props.index}>
                                 <img src={require('../../assets/images/' + this.props.imgName)} alt="" />
                                 <span className="dublaj" style={{backgroundColor: 'rgb(138, 0, 0)'}}>Türkçe</span>
-                            </Link>
+                            </NavLink>
                         </div>
                         <div className="link_video">
-                            <Link to="#">
+                            <NavLink to={'/films/' + this.props.index}>
                                 <img src={require('../../assets/images/' + this.props.vimgName)} alt="" />
                                 <span className="play"></span>
                                 <span className="layout"></span>
                                 <span className="length">1:16:10</span>
-                            </Link>
+                            </NavLink>
                         </div>
                         <div className="about">
                             <dl>
@@ -34,13 +34,13 @@ class Film extends Component {
                                 <dd>8.2</dd>
                                 <dt>Country</dt>
                                 <dd>
-                                    <Link to="">USA</Link>
+                                    <NavLink to="">USA</NavLink>
                                 </dd>
                                 <dt>Genre</dt>
                                 <dd>
-                                    <Link to="">Thriller,</Link>
-                                    <Link to="">Adventure,</Link>
-                                    <Link to="">Comics</Link>
+                                    <NavLink to="">Thriller,</NavLink>
+                                    <NavLink to="">Adventure,</NavLink>
+                                    <NavLink to="">Comics</NavLink>
                                 </dd>
                                 <dt>Views</dt>
                                 <dd>

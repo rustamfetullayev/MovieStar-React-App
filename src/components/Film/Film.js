@@ -55,7 +55,7 @@ class Film extends Component {
                         <div className='films mt-5'>
                             {this.state.films.map((f,index) => {
                                 return(
-                                    <FilmComponent key={index} imgName={f.name} vimgName={f.vname} />
+                                    <FilmComponent key={index} imgName={f.name} vimgName={f.vname} index={index} />
                                 )
                             })}
                         </div>

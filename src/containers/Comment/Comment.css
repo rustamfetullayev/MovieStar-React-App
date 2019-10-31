@@ -1,0 +1,74 @@
+#comments {
+  border-bottom: 1px solid #d8d8d8;
+  padding: 50px 0px;
+}
+#comments .header {
+  padding-top: 10px;
+  border-bottom: 1px solid #d8d8d8;
+}
+#comments .header h3 {
+  margin: 0px !important;
+  color: #fbbd61;
+  border-bottom: 3px solid #fbbd61;
+  width: 55%;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+#comments .all_comments {
+  padding: 10px 50px;
+  width: 100%;
+  overflow-y: scroll;
+  height: 565px;
+}
+#comments .all_comments .usr_img {
+  width: 67px;
+  height: 67px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+#comments .all_comments .text .date {
+  color: #fbbd61;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+#comments .all_comments .text .name {
+  color: #5e5e5e;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+#comments .all_comments .text .content {
+  color: #b8b8b8;
+  font-size: 0.9em;
+}
+#comments .comment_text p {
+  color: #5e5e5e;
+  font-size: 0.9em;
+}
+#comments .comment_text textarea {
+  resize: none;
+  margin-bottom: 10px;
+  outline: none;
+  padding: 20px;
+}
+#comments .comment_text input {
+  background-color: white;
+  padding: 10px 25px;
+  border: 2px solid #ec7532;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #ec7532;
+  transition: all 0.2s linear;
+  outline: none;
+}
+#comments .comment_text input:hover {
+  color: white;
+  background-color: #ec7532;
+}
+
+@media (max-width: 1024px) {
+  #comments .comment_text textarea {
+    width: 100%;
+  }
+}
