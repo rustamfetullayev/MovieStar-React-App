@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import Aux from '../../../containers/Auxiliary';
 import { Link } from 'react-router-dom';
 import FilmTheme from '../../../containers/Theme/FilmTheme/FilmTheme';
 import Comment from '../../../containers/Comment/Comment';
 import './SingleFilm.css';
-import Iframe from 'react-iframe';
+// import Iframe from 'react-iframe';
 
 class SingleFilm extends Component {
     render() {
         return (
-            <Aux>
+            <React.Fragment>
                 <FilmTheme />
 
                 <section id="film">
@@ -99,11 +98,11 @@ class SingleFilm extends Component {
 
                 <section id="film_iframe">
                     <img src={require('../../../assets/images/film-slide.jpg')} alt="" className="cover_img" />
-                    <Iframe url="http://video.az/embed/movie/3864" frameBorder="0" allowFullScreen="allowfullscreen" />
+                    {/* <Iframe url="http://video.az/embed/movie/3864" frameBorder="0" allowFullScreen="allowfullscreen" /> */}
                 </section>
 
                 <Comment />
-            </Aux>
+            </React.Fragment>
         )
     }
 }

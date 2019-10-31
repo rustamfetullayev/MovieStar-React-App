@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Aux from '../../containers/Auxiliary';
 import MainTheme from '../../containers/Theme/MainTheme/MainTheme';
 import './News.css';
 import { NavLink } from 'react-router-dom';
@@ -16,7 +15,7 @@ class News extends Component {
     }
     render() {
         return (
-            <Aux>
+            <React.Fragment>
                 <MainTheme title='Cinema news' subtitle='THE VERY LATEST' />
 
                 <section id="news">
@@ -64,7 +63,7 @@ class News extends Component {
                         </div>
                     </div>
                 </section>
-            </Aux>
+            </React.Fragment>
         )
     }
 }

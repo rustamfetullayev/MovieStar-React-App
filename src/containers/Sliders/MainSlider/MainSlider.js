@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Aux from '../../Auxiliary';
 import './MainSlider.css';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -45,7 +44,7 @@ class MainSlider extends Component {
         }
 
         return (
-            <Aux>
+            <React.Fragment>
                 <section id="main_slider">
                     <OwlCarousel className='owl-theme' {...carouselProps}>
                         {
@@ -75,7 +74,7 @@ class MainSlider extends Component {
                     </OwlCarousel>
                     <img className="arrow" src={require('../../../assets/images/scroll-arrow.svg')} alt="" />
                 </section>
-            </Aux>
+            </React.Fragment>
         )
     }
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import Aux from '../Auxiliary';
 import './Header.css';
 
 class Header extends Component {
@@ -15,7 +14,7 @@ class Header extends Component {
 
     render() {
         return (
-            <Aux>
+            <React.Fragment>
                 <section id="heading">
                     <div className="container">
                         <div className="row">
@@ -115,7 +114,7 @@ class Header extends Component {
                         </div>
                     </div>
                 </section>
-            </Aux>
+            </React.Fragment>
         )
     }
 }

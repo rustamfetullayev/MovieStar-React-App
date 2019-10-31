@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MainTheme from '../../containers/Theme/MainTheme/MainTheme';
 import FilmComponent from '../../containers/Film/Film';
-import Aux from '../../containers/Auxiliary';
 import {Link} from 'react-router-dom';
 import './Film.css';
 
@@ -23,7 +22,7 @@ class Film extends Component {
     }
     render() {
         return (
-            <Aux>
+            <React.Fragment>
                 <MainTheme title='Films' subtitle='The very latest' searchEnabled={true} />
 
                 <section id="films">
@@ -61,7 +60,7 @@ class Film extends Component {
                         </div>
                     </div>
                 </section>
-            </Aux>
+            </React.Fragment>
         )
     }
 }

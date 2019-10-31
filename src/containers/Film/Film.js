@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import Aux from '../Auxiliary';
 import {NavLink} from 'react-router-dom';
 import './Film.css';
 
 class Film extends Component {
     render() {
         return (
-            <Aux>
+            <React.Fragment>
                 <div className="col-md-12 mb-5">
                     <div className="name">
                         <h4>Avengers</h4>
@@ -49,7 +48,7 @@ class Film extends Component {
                         </div>
                     </div>
                 </div>
-            </Aux>
+            </React.Fragment>
         )
     }
 }

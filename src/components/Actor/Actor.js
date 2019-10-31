@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import MainTheme from '../../containers/Theme/MainTheme/MainTheme';
-import Aux from '../../containers/Auxiliary';
 import {Link} from 'react-router-dom';
 import './Actor.css';
 
@@ -23,7 +22,7 @@ class Actor extends Component {
     }
     render() {
         return (
-            <Aux>
+            <React.Fragment>
                 <MainTheme title='Actors' subtitle='All our' searchEnabled={true} />
 
                 <section id="actors">
@@ -46,7 +45,7 @@ class Actor extends Component {
                         </div>
                     </div>
                 </section>
-            </Aux>
+            </React.Fragment>
         )
     }
 }

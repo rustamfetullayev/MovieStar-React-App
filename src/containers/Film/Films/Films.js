@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Aux from '../../Auxiliary';
 import '../Film.css';
 import Film from '../Film';
 
@@ -16,7 +15,7 @@ class Films extends Component{
 
     render(){
         return(
-            <Aux>
+            <React.Fragment>
                 <section id="last_5_film">
                     <div className='container'>
                         <div className='row mt-5'>
@@ -35,7 +34,7 @@ class Films extends Component{
                         </div>
                     </div>
                 </section>
-            </Aux>
+            </React.Fragment>
         )
     }
 }

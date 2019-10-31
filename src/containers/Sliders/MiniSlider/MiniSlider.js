@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Aux from '../../Auxiliary';
 import './MiniSlider.css';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -46,7 +45,7 @@ class MiniSlider extends Component {
             }
         }
         return (
-            <Aux>
+            <React.Fragment>
                 <section id="rated_films">
                     <div className="container">
                         <div className="row">
@@ -90,7 +89,7 @@ class MiniSlider extends Component {
                         </div>
                     </div>
                 </section>
-            </Aux>
+            </React.Fragment>
         )
     }
 }
