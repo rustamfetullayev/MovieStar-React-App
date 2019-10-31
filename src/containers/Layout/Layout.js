@@ -10,6 +10,7 @@ import Film from '../../components/Film/Film';
 import Actor from '../../components/Actor/Actor';
 import News from '../../components/News/News';
 import SingleFilm from '../../components/Film/SingleFilm/SingleFilm';
+import Iframe from 'react-iframe';
 
 class Layout extends Component {
     render() {
@@ -20,7 +21,7 @@ class Layout extends Component {
                 </div>
 
                 <div id="trailer">
-                    <iframe id="trailer_iframe" src="https://www.youtube.com/embed/Md6Dvxdr0AQ" frameBorder="0" allowFullScreen="allowfullscreen"></iframe>
+                    <Iframe id="trailer_iframe" url="https://www.youtube.com/embed/Md6Dvxdr0AQ" frameBorder="0" allowFullScreen="allowfullscreen" />
                 </div>
 
                 <Header />

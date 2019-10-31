@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import FilmTheme from '../../../containers/Theme/FilmTheme/FilmTheme';
 import Comment from '../../../containers/Comment/Comment';
 import './SingleFilm.css';
+import Iframe from 'react-iframe';
 
 class SingleFilm extends Component {
     render() {
@@ -98,7 +99,7 @@ class SingleFilm extends Component {
 
                 <section id="film_iframe">
                     <img src={require('../../../assets/images/film-slide.jpg')} alt="" className="cover_img" />
-                    <iframe src="http://video.az/embed/movie/3864" frameBorder="0" allowFullScreen="allowfullscreen"></iframe>
+                    <Iframe url="http://video.az/embed/movie/3864" frameBorder="0" allowFullScreen="allowfullscreen" />
                 </section>
 
                 <Comment />
