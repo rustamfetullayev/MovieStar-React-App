@@ -1,0 +1,252 @@
+#films .name {
+  padding: 0px 20px;
+}
+#films .inner {
+  position: relative;
+  padding: 25px 20px;
+  border-bottom: 1px solid #d8d8d8;
+  display: flex;
+  justify-content: space-between;
+}
+#films .inner .link_image {
+  overflow: hidden;
+  width: 20%;
+  height: 287px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#films .inner .link_image a {
+  position: relative;
+}
+#films .inner .link_image a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+#films .inner .link_image a .dublaj {
+  position: absolute;
+  top: -100px;
+  left: -60px;
+  width: 220px;
+  height: 40px;
+  transform: rotate(-45deg);
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 115%;
+  font-family: "Kalam", cursive;
+  text-transform: uppercase;
+}
+#films .inner .link_image a:hover img {
+  transform: scale(1.1);
+}
+#films .inner .link_video {
+  width: 50%;
+  max-height: 287px;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#films .inner .link_video a {
+  position: relative;
+  overflow: hidden;
+}
+#films .inner .link_video a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+#films .inner .link_video a .play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 50px;
+  height: 50px;
+  clip-path: polygon(100% 50%, 10% 1%, 10% 100%);
+  background-color: white;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.2s linear;
+  transition-delay: 0.2s;
+}
+#films .inner .link_video a .layout {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 30px;
+  left: -560px;
+  transform: rotate(-30deg);
+  background-color: #be5f289a;
+  transition: all 0.2s linear;
+}
+#films .inner .link_video a .length {
+  position: absolute;
+  right: 20px;
+  bottom: -130px;
+  z-index: 2;
+  color: white;
+}
+#films .inner .link_video a:hover .play {
+  opacity: 0.8;
+}
+#films .inner .link_video a:hover .layout {
+  top: -300px;
+  left: -60px;
+}
+#films .inner .about {
+  width: 30%;
+}
+#films .inner .about dt {
+  color: #be5f28;
+}
+#films .inner .about dd i {
+  margin: 5px;
+}
+#films .inner .about dd a {
+  text-decoration: none;
+  color: #fbbd61;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+}
+#films .inner .about dd a:hover {
+  color: #be5f28;
+}
+#films .inner .save_icon {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+#films .select_list {
+  width: 80%;
+  position: relative;
+}
+#films .select_list button {
+  position: relative;
+  background: none;
+  border: 2px solid #d8d8d8;
+  border-radius: 20px;
+  padding: 10px 15px;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  color: #545454;
+  transition: all 0.2s linear;
+}
+#films .select_list button .dropdown_arrow {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: #d8d8d8;
+  clip-path: polygon(0 0, 50% 30%, 100% 0);
+  left: 50%;
+  top: 45px;
+  transform: translateX(-50%);
+}
+#films .select_list button .clone_down {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  clip-path: polygon(0 0, 50% 30%, 100% 0);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 42px;
+  transition: all 0.2s linear;
+}
+#films .select_list button .clone_up {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  clip-path: polygon(0 0, 50% 30%, 100% 0);
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  bottom: 42px;
+  display: none;
+  transition: all 0.2s linear;
+}
+#films .select_list button:hover {
+  background-color: #ec7532;
+  color: white;
+}
+#films .select_list button:hover .clone_down {
+  background-color: #ec7532;
+}
+#films .select_list button:hover .clone_up {
+  background-color: #ec7532;
+}
+#films .select_list .dropdown_select_list {
+  display: none;
+  position: absolute;
+  top: 160%;
+  width: 100%;
+  list-style: none;
+  border: 1px solid #d8d8d8;
+  z-index: 50;
+  transition: all 0.1s linear;
+}
+#films .select_list .dropdown_select_list li {
+  background-color: white;
+  width: 100%;
+  padding: 10px 5px;
+  text-align: center;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+#films .select_list .dropdown_select_list li:not(:last-child) {
+  border-bottom: 1px solid #d8d8d8;
+}
+#films .select_list .dropdown_select_list li:hover {
+  background-color: #ec7532;
+}
+#films .select_list .dropdown_select_list li:hover a {
+  color: white;
+}
+#films .select_list .dropdown_select_list li a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+#films .active button .dropdown_arrow {
+  top: -82px;
+  transform: translateX(-50%) rotate(180deg);
+}
+#films .active button .clone_down {
+  display: none;
+}
+#films .active button .clone_up {
+  display: block;
+}
+#films .active .dropdown_select_list {
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  #films .inner .link_image {
+    width: 100%;
+    height: 400px;
+  }
+  #films .inner .link_image a .dublaj {
+    top: -150px;
+  }
+  #films .inner .link_video {
+    display: none;
+  }
+  #films .inner .about {
+    display: none;
+  }
+  #films .inner .save_icon {
+    top: -20px;
+    right: 20px;
+  }
+}

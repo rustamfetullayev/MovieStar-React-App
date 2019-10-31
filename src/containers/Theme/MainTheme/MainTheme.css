@@ -1,0 +1,210 @@
+#main_theme {
+  position: relative;
+  height: 405px;
+}
+#main_theme .back_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#main_theme .text {
+  z-index: 99;
+  position: absolute;
+  top: 50%;
+  left: 13%;
+}
+#main_theme .text p {
+  color: #fbbd61;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+#main_theme .text h3 {
+  font-size: 3.5em;
+  color: white;
+  font-weight: 300;
+}
+#main_theme:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 98;
+}
+#main_theme .search {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 74%;
+  padding: 20px 20px 0px 20px;
+  z-index: 100;
+  background-color: white;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+#main_theme .search input {
+  width: 100%;
+  outline: none;
+  border-radius: 25px;
+  border: 1px solid #d8d8d8;
+  padding: 10px 15px;
+}
+#main_theme .search button {
+  position: absolute;
+  right: 4%;
+  top: 55%;
+  background: none;
+  border: none;
+  color: #ec7532;
+  outline: none;
+  cursor: pointer;
+}
+#main_theme .search #live_search {
+  z-index: 110;
+  padding: 20px 0px;
+  border-radius: 25px;
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 250px;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  overflow-y: scroll;
+}
+#main_theme .search #live_search a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  width: 100%;
+  height: 150px;
+  border-bottom: 1px solid #d8d8d8;
+  transition: all 0.2s linear;
+}
+#main_theme .search #live_search a:hover {
+  background-color: #d8d8d8;
+}
+#main_theme .search #live_search a .image {
+  width: 20%;
+  height: 100%;
+  padding: 10px;
+}
+#main_theme .search #live_search a .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#main_theme .search #live_search a .details {
+  width: 78%;
+  padding: 10px;
+}
+#main_theme .search #live_search a .details .name {
+  font-weight: 800;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+#main_theme .search #live_search a .details dl dt {
+  color: #ec7532;
+  width: 18%;
+  display: inline-block;
+  margin-bottom: 0px;
+}
+#main_theme .search #live_search a .details dl dd {
+  width: 72%;
+  display: inline-block;
+  margin-bottom: 0px;
+}
+#main_theme .search #live_search_actor {
+  z-index: 110;
+  padding: 20px 0px;
+  border-radius: 25px;
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  overflow-y: scroll;
+}
+#main_theme .search #live_search_actor a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px 20px;
+  border-bottom: 1px solid #d8d8d8;
+  transition: all 0.2s linear;
+}
+#main_theme .search #live_search_actor a:hover {
+  background-color: #d8d8d8;
+}
+#main_theme .search #live_search_actor a .actor_name {
+  font-size: 1.2em;
+  font-weight: 800;
+  margin-bottom: 0px;
+  padding: 10px 0px;
+}
+#main_theme .arrow {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 98;
+}
+
+@media (max-width: 1024px) {
+  #main_theme .text {
+    left: 5%;
+  }
+  #main_theme .text p {
+    font-size: 0.8em;
+  }
+  #main_theme .text h3 {
+    font-size: 2.5em;
+  }
+  #main_theme .search {
+    width: 85%;
+  }
+  #main_theme .search button {
+    right: 10%;
+  }
+  #main_theme .search #live_search {
+    padding: 10px 0px;
+    width: 100%;
+  }
+  #main_theme .search #live_search a {
+    height: 140px;
+  }
+  #main_theme .search #live_search a .image {
+    width: 30%;
+    padding: 5px;
+  }
+  #main_theme .search #live_search a .details {
+    width: 68%;
+    padding: 5px;
+  }
+  #main_theme .search #live_search a .details .name {
+    font-size: 0.8em;
+  }
+  #main_theme .search #live_search a .details dl {
+    line-height: 100%;
+  }
+  #main_theme .search #live_search a .details dl dt {
+    font-size: 0.5em;
+  }
+  #main_theme .search #live_search a .details dl dd {
+    font-size: 0.5em;
+  }
+  #main_theme .search #live_search_actor {
+    padding: 10px 0px;
+    width: 100%;
+  }
+  #main_theme .search #live_search_actor a .actor_name {
+    font-size: 0.9em;
+  }
+}

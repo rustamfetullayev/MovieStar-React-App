@@ -1,0 +1,56 @@
+footer {
+  background-color: #101010;
+}
+footer .inner h6 {
+  color: #ec7532;
+  transition: all 0.2s linear;
+  margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+footer .inner ul {
+  list-style: none;
+}
+footer .inner ul li {
+  margin-bottom: 5px;
+}
+footer .inner ul li a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s linear;
+}
+footer .inner ul li a:hover {
+  color: #fbbd61;
+}
+footer .inner ul li a i {
+  margin-right: 10px;
+}
+footer .sponsors {
+  width: 90%;
+  padding: 20px 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+footer .sponsors span {
+  font-size: 0.8em;
+  color: white;
+}
+footer .sponsors span a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+footer .sponsors span a:hover {
+  color: #ec7532;
+}
+
+@media (max-width: 1024px) {
+  footer .inner h6 {
+    text-align: center;
+  }
+  footer .inner ul li {
+    text-align: center;
+  }
+  footer .sponsors {
+    text-align: center;
+  }
+}
