@@ -5,16 +5,16 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Home from '../../components/Home/Home';
 import Contact from '../Contact/Contact';
-// import Film from '../../components/Film/Film';
+import Film from '../../components/Film/Film';
 import Actor from '../../components/Actor/Actor';
 import News from '../../components/News/News';
 import SingleFilm from '../../components/Film/SingleFilm/SingleFilm';
+import Login from '../../components/Login/Login';
+import Personal from '../../components/Personal/Personal';
+import Register from '../../components/Register/Register';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 // import Iframe from 'react-iframe';
-import asyncComponent from '../../hoc/AsyncComponent';
-
-const asyncFilm = asyncComponent(() => {
-    return import('../../components/Film/Film');
-});
+import { AuthProvider } from '../Auth/Auth';
 
 class Layout extends Component {
     render() {
@@ -29,15 +29,19 @@ class Layout extends Component {
                 </div>
 
                 <Header />
-
-                <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/films" exact component={asyncFilm} />
-                    <Route path="/films/:id" exact component={SingleFilm} />
-                    <Route path="/actors" exact component={Actor} />
-                    <Route path="/news" exact component={News} />
-                    <Route render={() => {return(<h1>Not Found</h1>)} } />
-                </Switch>
+                <AuthProvider>
+                    <Switch>
+                        <Route path="/" exact component={Home} />
+                        <Route path="/films" exact component={Film} />
+                        <Route path="/films/:id" exact component={SingleFilm} />
+                        <Route path="/actors" exact component={Actor} />
+                        <Route path="/news" exact component={News} />
+                        <Route path="/login" exact component={Login} />
+                        <PrivateRoute path="/personal" exact component={Personal} />
+                        <Route path="/register" exact component={Register} />
+                        <Route render={() => { return (<h1>Not Found</h1>) }} />
+                    </Switch>
+                </AuthProvider>
 
                 <Contact />
                 <Footer />

@@ -1,0 +1,72 @@
+#signup {
+  padding: 40px;
+  border-bottom: 1px solid #d8d8d8;
+}
+#signup form {
+  width: 100%;
+}
+#signup form .usr_new_image {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  border: 4px #d8d8d8 dashed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#signup form .usr_new_image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+#signup form .usr_new_image::before {
+  content: "\f067";
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 4em;
+  opacity: 0.5;
+  z-index: 2;
+}
+#signup form label {
+  font-weight: 800;
+}
+#signup form input {
+  width: 60%;
+  padding: 5px 20px;
+  outline: none;
+  border-radius: 25px;
+  border: 1px solid #d8d8d8;
+}
+#signup form .image {
+  display: none;
+}
+#signup form .submit {
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  width: 50%;
+  border: 1px solid #ec7532;
+  transition: all 0.2s linear;
+  background: none;
+  color: #ec7532;
+  cursor: pointer;
+}
+#signup form .submit:hover {
+  background-color: #ec7532;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  #signup form input {
+    width: 100%;
+  }
+  #signup form .submit {
+    width: 80%;
+  }
+}

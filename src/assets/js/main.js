@@ -67,3 +67,21 @@ $(document).on('click', '#trailer', function () {
     $("#trailer_iframe").attr("src", "");
     $("#trailer_iframe").attr("src", video);
 })
+
+$(document).on('click', '#personal .posts nav ul #liked', function () {
+    if (!$(this).hasClass('active')) {
+        $(this).addClass('active');
+        $(this).next().removeClass('active');
+        $('#personal .posts .screen .liked').addClass('selected');
+        $('#personal .posts .screen .saved').removeClass('selected');
+    }
+})
+
+$(document).on('click', '#personal .posts nav ul #saved', function () {
+    if (!$(this).hasClass('active')) {
+        $(this).addClass('active');
+        $(this).prev().removeClass('active');
+        $('#personal .posts .screen .saved').addClass('selected');
+        $('#personal .posts .screen .liked').removeClass('selected');
+    }
+})
