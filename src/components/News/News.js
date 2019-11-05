@@ -13,6 +13,11 @@ class News extends Component {
             { image_main: 'film-slide.jpg', mini_images: ['hero-1.jpg', 'film-slide-1.jpg', 'hero-3.jpg', 'hero-news.jpg'] }
         ]
     }
+
+    componentDidMount(){
+        document.title = 'MovieStar - News';
+    }
+
     render() {
         return (
             <React.Fragment>

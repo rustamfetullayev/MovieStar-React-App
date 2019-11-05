@@ -20,6 +20,11 @@ class Actor extends Component {
             { name: 'Brad Pitt', count: 21, image: 'brad_pitt.jpg' }
         ]
     }
+
+    componentDidMount(){
+        document.title = 'MovieStar - Actor';
+    }
+
     render() {
         return (
             <React.Fragment>

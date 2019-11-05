@@ -43,7 +43,7 @@ const Header = () => {
             <React.Fragment>
                 <span>
                     <i className="fas fa-sign-out-alt"></i>
-                    <NavLink to='/login' onClick={(event) => {
+                    <NavLink to='/logout' onClick={(event) => {
                         event.preventDefault();
                         base.auth().signOut()
                     }}>Log out</NavLink>

@@ -1,9 +1,17 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import './Register.css';
 import MainTheme from '../../containers/Theme/MainTheme/MainTheme';
 import base from '../../containers/Base/Base';
 
 const Register = ({ history }) => {
+    const [error, seterror] = useState({
+        message: null
+    })
+
+    useEffect(() => {
+        document.title = 'MovieStar - Register';
+    }, [])
+
     const handleRegister = useCallback(async event => {
         event.preventDefault();
         const { email, password } = event.target.elements;
@@ -12,7 +20,7 @@ const Register = ({ history }) => {
             history.push("/");
         }
         catch (error) {
-            alert(error);
+            seterror({ message: error.message })
         }
     }, [history]);
 
@@ -45,6 +53,13 @@ const Register = ({ history }) => {
                                 </div>
 
                                 <div className="form-group">
+                                    {error.message ?
+                                        <div className="col-md-12 d-flex justify-content-center">
+                                            <div class="alert alert-danger" role="alert">{error.message}</div>
+                                        </div>
+                                        :
+                                        null
+                                    }
                                     <div className="col-md-12 d-flex justify-content-center">
                                         <input className="submit" type="submit" value="Register" />
                                     </div>

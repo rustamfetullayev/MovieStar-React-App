@@ -5,6 +5,10 @@ import Films from '../../containers/Film/Films/Films';
 import TopIMDBFilm from '../../containers/Film/TopIMDBFilm/TopIMDBFilm';
 
 class Home extends Component{
+    componentDidMount(){
+        document.title = 'MovieStar - Home';
+    }
+
     render(){
         return(
             <React.Fragment>

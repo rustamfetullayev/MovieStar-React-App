@@ -20,6 +20,11 @@ class Film extends Component {
             { name: 'Select Category', items: [{ name: 'XXX', url: '#' },{ name: 'XXX', url: '#' },{ name: 'XXX', url: '#' }] }
         ]
     }
+
+    componentDidMount(){
+        document.title = 'MovieStar - Film';
+    }
+
     render() {
         return (
             <React.Fragment>

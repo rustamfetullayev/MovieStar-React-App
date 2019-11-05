@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import './Login.css';
 import MainTheme from '../../containers/Theme/MainTheme/MainTheme';
@@ -6,6 +6,14 @@ import base from '../../containers/Base/Base';
 import { AuthContext } from '../../containers/Auth/Auth';
 
 const Login = ({ history }) => {
+    const [error, seterror] = useState({
+        message: null
+    })
+
+    useEffect(() => {
+        document.title = 'MovieStar - Login';
+    }, [])
+
     const handleLogin = useCallback(async event => {
         event.preventDefault();
         const { email, password } = event.target.elements;
@@ -14,7 +22,7 @@ const Login = ({ history }) => {
             history.push('/');
         }
         catch (error) {
-            alert(error);
+            seterror({ message: error.message });
         }
     }, [history]);
 
@@ -52,6 +60,13 @@ const Login = ({ history }) => {
                                 </div>
 
                                 <div className="form-group">
+                                    {error.message ?
+                                        <div className="col-md-12 d-flex justify-content-center">
+                                            <div class="alert alert-danger" role="alert">{error.message}</div>
+                                        </div>
+                                        :
+                                        null
+                                    }
                                     <div className="col-md-12 d-flex justify-content-center">
                                         <input className="submit" type="submit" value="Register" />
                                     </div>
