@@ -12,6 +12,7 @@ import SingleFilm from '../../components/Film/SingleFilm/SingleFilm';
 import Login from '../../components/Login/Login';
 import Personal from '../../components/Personal/Personal';
 import Register from '../../components/Register/Register';
+import ErrorPage from '../../components/Error/Error';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 // import Iframe from 'react-iframe';
 import { AuthProvider } from '../Auth/Auth';
@@ -39,7 +40,7 @@ const Layout = () => {
                     <Route path="/login" exact component={Login} />
                     <PrivateRoute path="/personal" exact component={Personal} />
                     <Route path="/register" exact component={Register} />
-                    <Route render={() => { return (<h1>Not Found</h1>) }} />
+                    <Route component={ErrorPage} />
                 </Switch>
             </AuthProvider>
 
